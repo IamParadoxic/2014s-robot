@@ -13,10 +13,10 @@ public class Solenoid_System extends Subsystem {
 	 public static DoubleSolenoid IntakeSol = RobotMap.IntakeSol;
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
-	public void Down(){
+	public void Intake_Down(){
 		IntakeSol.set(Value.kReverse);
 	}
-	public void Up(){
+	public void Intake_Up(){
 		IntakeSol.set(Value.kForward);
 		
 	}

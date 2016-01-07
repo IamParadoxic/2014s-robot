@@ -7,21 +7,21 @@ import edu.wpi.first.wpilibj.command.Command;
 /**
  *
  */
-public class Solenoid_Up extends Command {
+public class Intake_Down extends Command {
 
-    public Solenoid_Up() {
-        // Use requires() here to declare subsystem dependencies
-        requires(Robot.solenoid_system);
-    }
+	 public Intake_Down() {
+	        // Use requires() here to declare subsystem dependencies
+	        requires(Robot.solenoid_system);
+	    }
 
-    // Called just before this Command runs the first time
-    protected void initialize() {
-    }
+	    // Called just before this Command runs the first time
+	    protected void initialize() {
+	    }
 
-    // Called repeatedly when this Command is scheduled to run
-    protected void execute() {
-    	Robot.solenoid_system.Up();
-    }
+	    // Called repeatedly when this Command is scheduled to run
+	    protected void execute() {
+	    	Robot.solenoid_system.Intake_Down();
+	    }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {

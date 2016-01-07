@@ -2,8 +2,8 @@ package org.usfirst.frc.team2557.robot;
 
 import org.usfirst.frc.team2557.robot.commands.Intake_In;
 import org.usfirst.frc.team2557.robot.commands.Intake_Out;
-import org.usfirst.frc.team2557.robot.commands.Solenoid_Down;
-import org.usfirst.frc.team2557.robot.commands.Solenoid_Up;
+import org.usfirst.frc.team2557.robot.commands.Intake_Down;
+import org.usfirst.frc.team2557.robot.commands.Intake_Up;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
@@ -76,8 +76,8 @@ public class OI {
     gp2LJB = new JoystickButton(gamepad2, 9);
     gp2RJB = new JoystickButton(gamepad2, 10);
     //Controller 1 button functions
-    gp1A.whileHeld(new Solenoid_Up()); 
-    gp1B.whileHeld(new Solenoid_Down());
+    gp1A.whileHeld(new Intake_Up()); 
+    gp1B.whileHeld(new Intake_Down());
     gp1LB.whileHeld(new Intake_In());
     gp1RB.whileHeld(new Intake_Out());
     

@@ -17,8 +17,10 @@ public class RobotMap {
 	public static SpeedController IntakeMotor;	//Port4
 	public static SpeedController WenchMotor;	//Port5
 	
-	public static DoubleSolenoid IntakeSol; //Breakout 1 ports 0 and 1
-    public static void init(){
+	public static DoubleSolenoid IntakeSol; //Breakout 1 ports 2 and 3
+    public static DoubleSolenoid WenchSol; //Breakout 1 ports 0 and 1
+	public static DoubleSolenoid SuperShifterSol; //Breakout ports 4 and 5
+	public static void init(){
     
     
     
@@ -38,8 +40,9 @@ public class RobotMap {
 	
 	WenchMotor = new Talon(5);
 	
-	IntakeSol = new DoubleSolenoid(0, 0, 1);
-	
+	WenchSol = new DoubleSolenoid(0, 0, 1);
+	IntakeSol = new DoubleSolenoid(0, 2, 3);
+	SuperShifterSol = new DoubleSolenoid(0, 4, 5);
     }
     // If you are using multiple modules, make sure to define both the port
     // number and the module. For example you with a rangefinder:
