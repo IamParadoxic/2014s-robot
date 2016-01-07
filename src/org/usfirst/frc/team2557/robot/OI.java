@@ -80,7 +80,7 @@ public class OI {
     gp1A.whenReleased(new Intake_Up());
 
     
-    gp1B.whenPressed(new Launch());
+    gp1B.whileHeld(new Launch());
 
     //this should work as a two button toggle, that is if it works how I want it to
     gp1X.cancelWhenPressed(new SS_Down());
