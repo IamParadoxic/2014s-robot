@@ -18,7 +18,7 @@ import edu.wpi.first.wpilibj.buttons.JoystickButton;
  * interface to the commands and command groups that allow control of the robot.
  */
 public class OI {
-    
+    //Master OI
 	//Gamepads
 	public Joystick gamepad1;
     public Joystick gamepad2;
