@@ -15,17 +15,17 @@ public class Solenoid_System extends Subsystem {
 	 public static DoubleSolenoid SuperShifterSol = RobotMap.SuperShifterSol;
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
-	public void Intake_Down(){
+	public void Intake_Up(){
 		IntakeSol.set(Value.kReverse);
 	}
-	public void Intake_Up(){
+	public void Intake_Down(){
 		IntakeSol.set(Value.kForward);
 		
 	}
-	public void Wench_Down(){
+	public void Wench_Lock(){
 		WenchSol.set(Value.kReverse);
 	}
-	public void Wench_Up(){
+	public void Wench_Unlock(){
 		WenchSol.set(Value.kForward);
 		
 	}

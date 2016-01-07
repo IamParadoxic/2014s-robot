@@ -6,8 +6,8 @@ import org.usfirst.frc.team2557.robot.commands.Intake_Down;
 import org.usfirst.frc.team2557.robot.commands.Intake_Up;
 import org.usfirst.frc.team2557.robot.commands.SS_Down;
 import org.usfirst.frc.team2557.robot.commands.SS_Up;
-import org.usfirst.frc.team2557.robot.commands.Wench_Down;
-import org.usfirst.frc.team2557.robot.commands.Wench_Up;
+import org.usfirst.frc.team2557.robot.commands.Wench_Lock;
+import org.usfirst.frc.team2557.robot.commands.Wench_Unlock;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
@@ -85,12 +85,15 @@ public class OI {
     gp1A.whileHeld(new Intake_Up());
     gp1A.whenReleased(new Intake_Down());
     
-    gp1B.cancelWhenPressed(new Wench_Down());
-    gp1B.whileHeld(new Wench_Up());
-    gp1B.whenReleased(new Wench_Down());
+    gp1B.cancelWhenPressed(new Wench_Lock());
+    gp1B.whileHeld(new Wench_Unlock());
+    gp1B.whenReleased(new Wench_Lock());
+    //this sho
+    gp1X.cancelWhenPressed(new SS_Down());
+    gp1X.whenPressed(new SS_Up());
     
-    gp1X.whileHeld(new SS_Up());
-    gp1Y.whileHeld(new SS_Down());
+    gp1Y.cancelWhenPressed(new SS_Up());
+    gp1Y.whenPressed(new SS_Down());
     
     gp1LB.whileHeld(new Intake_In());
     gp1RB.whileHeld(new Intake_Out());
