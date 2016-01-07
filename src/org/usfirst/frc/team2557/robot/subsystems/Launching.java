@@ -14,21 +14,19 @@ public class Launching extends Subsystem {
     // here. Call these from Commands.
 	
 	public void WenchDown(){
-		if(RobotMap.WenchCoded.get() >= 0 && RobotMap.WenchCoded.get() > x){
+		if(RobotMap.WenchCoded.get() >= 0 && RobotMap.WenchCoded.get() < x){
 			RobotMap.WenchMotor.set(-1);
 		}
-		else if(RobotMap.WenchCoded.get() == x){
-			RobotMap.WenchSol.set(Value.kReverse);
-		}
+		RobotMap.WenchSol.set(Value.kReverse);
 	}
 	
 	public void WenchLaunch(){
 		if(RobotMap.WenchCoded.get() >= x && RobotMap.WenchCoded.get() > (x*2)){
 			RobotMap.WenchMotor.set(-1);
 		}
-		else if(RobotMap.WenchCoded.get() == (x*2)){
+		
 			RobotMap.WenchSol.set(Value.kForward);
-		}
+		
 	}
 	
 	
