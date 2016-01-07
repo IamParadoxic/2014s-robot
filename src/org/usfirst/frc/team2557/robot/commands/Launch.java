@@ -3,6 +3,7 @@ package org.usfirst.frc.team2557.robot.commands;
 import org.usfirst.frc.team2557.robot.Robot;
 import org.usfirst.frc.team2557.robot.RobotMap;
 
+import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 import edu.wpi.first.wpilibj.command.Command;
 
 /**
@@ -23,6 +24,7 @@ public class Launch extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+    	
     	if(RobotMap.WenchCoded.get() >= 0 && RobotMap.WenchCoded.get() > x){
     		Robot.launching.WenchDown();
     	}
