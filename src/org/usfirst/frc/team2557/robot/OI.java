@@ -4,6 +4,10 @@ import org.usfirst.frc.team2557.robot.commands.Intake_In;
 import org.usfirst.frc.team2557.robot.commands.Intake_Out;
 import org.usfirst.frc.team2557.robot.commands.Intake_Down;
 import org.usfirst.frc.team2557.robot.commands.Intake_Up;
+import org.usfirst.frc.team2557.robot.commands.SS_Down;
+import org.usfirst.frc.team2557.robot.commands.SS_Up;
+import org.usfirst.frc.team2557.robot.commands.Wench_Down;
+import org.usfirst.frc.team2557.robot.commands.Wench_Up;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
@@ -76,8 +80,18 @@ public class OI {
     gp2LJB = new JoystickButton(gamepad2, 9);
     gp2RJB = new JoystickButton(gamepad2, 10);
     //Controller 1 button functions
-    gp1A.whileHeld(new Intake_Up()); 
-    gp1B.whileHeld(new Intake_Down());
+    
+    gp1A.cancelWhenPressed(new Intake_Down());
+    gp1A.whileHeld(new Intake_Up());
+    gp1A.whenReleased(new Intake_Down());
+    
+    gp1B.cancelWhenPressed(new Wench_Down());
+    gp1B.whileHeld(new Wench_Up());
+    gp1B.whenReleased(new Wench_Down());
+    
+    gp1X.whileHeld(new SS_Up());
+    gp1Y.whileHeld(new SS_Down());
+    
     gp1LB.whileHeld(new Intake_In());
     gp1RB.whileHeld(new Intake_Out());
     
