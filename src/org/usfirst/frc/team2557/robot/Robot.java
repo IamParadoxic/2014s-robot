@@ -1,7 +1,7 @@
 
 package org.usfirst.frc.team2557.robot;
 
-import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
+//import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
@@ -62,6 +62,9 @@ public class Robot extends IterativeRobot {
         // instantiate the command used for the autonomous period
         autonomousCommand = new AutoCommand();
         
+        RobotMap.WenchCoded.reset();
+        RobotMap.Side1.reset();
+        RobotMap.Side2.reset();
         Intake_Up.start();
         //RobotMap.IntakeSol.set(Value.kReverse);
         Wench_Unlock.start();
