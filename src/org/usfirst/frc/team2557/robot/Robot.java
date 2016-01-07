@@ -8,6 +8,7 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import org.usfirst.frc.team2557.robot.commands.*;
 import org.usfirst.frc.team2557.robot.subsystems.Intake_System;
+import org.usfirst.frc.team2557.robot.subsystems.Launching;
 import org.usfirst.frc.team2557.robot.subsystems.Solenoid_System;
 import org.usfirst.frc.team2557.robot.subsystems.Tank;
 import org.usfirst.frc.team2557.robot.subsystems.Wench_System;
@@ -21,6 +22,9 @@ import org.usfirst.frc.team2557.robot.subsystems.Wench_System;
  */
 public class Robot extends IterativeRobot {
 
+	public static final Launching
+	launching = new Launching();
+	
 	public static final Tank
 	tank = new Tank();
 	
@@ -38,6 +42,7 @@ public class Robot extends IterativeRobot {
     public static Intake_System Intake_System;
     public static Wench_System Wench_System;
     public static Solenoid_System Solenoid_System;
+    public static Launching Launching;
     
     Command autonomousCommand;
     Command AutoCommand;
@@ -47,10 +52,10 @@ public class Robot extends IterativeRobot {
     Command Intake_Up;
     Command Intake_Down;
     Command Wench_Command;
-    Command Wench_Lock;
     Command Wench_Unlock;
     Command SS_Down;
     Command SS_Up;
+    Command Launch;
     
     /**
      * This function is run when the robot is first started up and should be
@@ -63,8 +68,7 @@ public class Robot extends IterativeRobot {
         autonomousCommand = new AutoCommand();
         
         RobotMap.WenchCoded.reset();
-        RobotMap.Side1.reset();
-        RobotMap.Side2.reset();
+
         Intake_Up.start();
         //RobotMap.IntakeSol.set(Value.kReverse);
         Wench_Unlock.start();
@@ -101,10 +105,12 @@ public class Robot extends IterativeRobot {
         Intake_System = new Intake_System();
         Wench_System = new Wench_System();
         Solenoid_System = new Solenoid_System();
+        Launching = new Launching();
+        
         LeftAndRight.start();
         Wench_Command.start();
-        Wench_Unlock = new Wench_Unlock();
-        Wench_Lock = new Wench_Lock();
+        
+        Launch = new Launch();
         Intake_In = new Intake_In();
         Intake_Out = new Intake_Out();
         Intake_Up = new Intake_Up();

@@ -22,8 +22,6 @@ public class RobotMap {
 	public static DoubleSolenoid SuperShifterSol; //Breakout ports 4 and 5
 	
 	public static Encoder WenchCoded;
-	public static Encoder Side1;
-	public static Encoder Side2;
 	
 	
 	public static void init(){
