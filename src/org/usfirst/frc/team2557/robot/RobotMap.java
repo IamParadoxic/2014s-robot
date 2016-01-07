@@ -8,7 +8,6 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
  * floating around.
  */
 public class RobotMap {
-    
 	
     public static SpeedController FrontLeft; 	//Port0
     public static SpeedController FrontRight; //Port1
