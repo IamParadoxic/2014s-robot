@@ -9,7 +9,7 @@ import edu.wpi.first.wpilibj.command.Command;
  *
  */
 public class Launch extends Command {
-
+    double x = 8;
     public Launch() {
         // Use requires() here to declare subsystem dependencies
         requires(Robot.launching);
@@ -21,10 +21,10 @@ public class Launch extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	if(RobotMap.WenchCoded.get() >= 0 && RobotMap.WenchCoded.get() > 8){
+    	if(RobotMap.WenchCoded.get() >= 0 && RobotMap.WenchCoded.get() > x){
     		Robot.launching.WenchDown();
     	}
-    	else if(RobotMap.WenchCoded.get() >= 8){
+    	else if(RobotMap.WenchCoded.get() >= x){
     		Robot.launching.WenchLaunch();
     		RobotMap.WenchCoded.reset();
     	}
