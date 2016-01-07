@@ -5,6 +5,7 @@ import org.usfirst.frc.team2557.robot.commands.Intake_Out;
 import org.usfirst.frc.team2557.robot.commands.Intake_Down;
 import org.usfirst.frc.team2557.robot.commands.Intake_Up;
 import org.usfirst.frc.team2557.robot.commands.Launch;
+import org.usfirst.frc.team2557.robot.commands.LaunchIt;
 import org.usfirst.frc.team2557.robot.commands.SS_Down;
 import org.usfirst.frc.team2557.robot.commands.SS_Up;
 
@@ -78,8 +79,10 @@ public class OI {
     gp1A.whileHeld(new Intake_Down());
     gp1A.whenReleased(new Intake_Up());
 
-    
+    gp1B.cancelWhenPressed(new LaunchIt());
     gp1B.whileHeld(new Launch());
+    gp1B.whenReleased(new LaunchIt());
+    
 
     //this should work as a two button toggle, that is if it works how I want it to
     gp1X.cancelWhenPressed(new SS_Down());

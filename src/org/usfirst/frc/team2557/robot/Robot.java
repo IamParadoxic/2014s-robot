@@ -56,6 +56,7 @@ public class Robot extends IterativeRobot {
     Command SS_Down;
     Command SS_Up;
     Command Launch;
+    Command LaunchIt;
     
     /**
      * This function is run when the robot is first started up and should be
@@ -107,10 +108,8 @@ public class Robot extends IterativeRobot {
         Solenoid_System = new Solenoid_System();
         Launching = new Launching();
         
-        LeftAndRight.start();
-        Wench_Command.start();
-        
         Launch = new Launch();
+        LaunchIt = new LaunchIt();
         Intake_In = new Intake_In();
         Intake_Out = new Intake_Out();
         Intake_Up = new Intake_Up();
@@ -133,6 +132,7 @@ public class Robot extends IterativeRobot {
      */
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
+        LeftAndRight.start();
     }
     
     /**
