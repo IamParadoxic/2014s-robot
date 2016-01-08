@@ -8,7 +8,7 @@ import edu.wpi.first.wpilibj.command.Command;
  *
  */
 public class Launch extends Command {
-
+//this command is to bring down the catapulte down and lock it
     double x = 8;
 
     public Launch() {

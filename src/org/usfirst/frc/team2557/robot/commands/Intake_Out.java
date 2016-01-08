@@ -8,7 +8,7 @@ import edu.wpi.first.wpilibj.command.Command;
  *
  */
 public class Intake_Out extends Command {
-
+//This ccomman it for the intake motor it if for removing what it brought in
     public Intake_Out() {
         // Use requires() here to declare subsystem dependencies
         requires(Robot.intake_system);

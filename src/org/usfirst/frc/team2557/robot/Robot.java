@@ -11,7 +11,6 @@ import org.usfirst.frc.team2557.robot.subsystems.Intake_System;
 import org.usfirst.frc.team2557.robot.subsystems.Launching;
 import org.usfirst.frc.team2557.robot.subsystems.Solenoid_System;
 import org.usfirst.frc.team2557.robot.subsystems.Tank;
-import org.usfirst.frc.team2557.robot.subsystems.Wench_System;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -28,9 +27,6 @@ public class Robot extends IterativeRobot {
 	public static final Tank
 	tank = new Tank();
 	
-	public static final Wench_System
-	wench_system = new Wench_System();
-	
 	public static final Intake_System
 	intake_system = new Intake_System();
 	
@@ -40,7 +36,6 @@ public class Robot extends IterativeRobot {
 	public static OI oi;
 	public static Tank Tank;
     public static Intake_System Intake_System;
-    public static Wench_System Wench_System;
     public static Solenoid_System Solenoid_System;
     public static Launching Launching;
     
@@ -51,7 +46,6 @@ public class Robot extends IterativeRobot {
     Command Intake_Out;
     Command Intake_Up;
     Command Intake_Down;
-    Command Wench_Command;
     Command Wench_Unlock;
     Command SS_Down;
     Command SS_Up;
@@ -104,7 +98,6 @@ public class Robot extends IterativeRobot {
         if (autonomousCommand != null) autonomousCommand.cancel();
         Tank = new Tank();
         Intake_System = new Intake_System();
-        Wench_System = new Wench_System();
         Solenoid_System = new Solenoid_System();
         Launching = new Launching();
         

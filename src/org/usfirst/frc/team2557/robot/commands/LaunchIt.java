@@ -9,7 +9,7 @@ import edu.wpi.first.wpilibj.command.Command;
  *
  */
 public class LaunchIt extends Command {
-
+//this command is to unwind the wench motor and unlock the catapulte
     public LaunchIt() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);

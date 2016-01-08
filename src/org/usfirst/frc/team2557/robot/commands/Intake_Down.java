@@ -8,7 +8,7 @@ import edu.wpi.first.wpilibj.command.Command;
  *
  */
 public class Intake_Down extends Command {
-
+//this is the command that is for bringing the intake arm down
 	 public Intake_Down() {
 	        // Use requires() here to declare subsystem dependencies
 	        requires(Robot.solenoid_system);

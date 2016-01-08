@@ -8,7 +8,7 @@ import edu.wpi.first.wpilibj.command.Command;
  *
  */
 public class SS_Down extends Command {
-
+//this command bring the SuperShifter down
     public SS_Down() {
         // Use requires() here to declare subsystem dependencies
     	requires(Robot.solenoid_system);

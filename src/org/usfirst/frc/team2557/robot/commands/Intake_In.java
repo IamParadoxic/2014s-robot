@@ -8,7 +8,7 @@ import edu.wpi.first.wpilibj.command.Command;
  *
  */
 public class Intake_In extends Command {
-
+//this command is to bring in stuff witht the intake motor
     public Intake_In() {
         // Use requires() here to declare subsystem dependencies
         requires(Robot.intake_system);

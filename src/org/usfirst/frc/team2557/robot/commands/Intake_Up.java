@@ -8,7 +8,7 @@ import edu.wpi.first.wpilibj.command.Command;
  *
  */
 public class Intake_Up extends Command {
-
+//this command is to bring the intake arm back up
     public Intake_Up() {
         // Use requires() here to declare subsystem dependencies
         requires(Robot.solenoid_system);

@@ -8,7 +8,7 @@ import edu.wpi.first.wpilibj.command.Command;
  *
  */
 public class Right_Wheels extends Command {
-
+//this command controls the right wheels
     public Right_Wheels() {
         // Use requires() here to declare subsystem dependencies
         requires(Robot.tank);

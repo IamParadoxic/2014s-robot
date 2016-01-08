@@ -9,7 +9,7 @@ import org.usfirst.frc.team2557.robot.commands.Right_Wheels;
  *
  */
 public class LeftAndRight extends CommandGroup {
-    
+    //this command group runns the commands that control the lefft and right wheels respectivly
     public  LeftAndRight() {
     
     	addParallel(new Left_Wheels());
