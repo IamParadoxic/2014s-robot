@@ -20,8 +20,7 @@ public class Wench_Command extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.wench_system.Out();
-    	Robot.wench_system.In();
+    	Robot.wench_system.MotorWench();
     }
 
     // Make this return true when this Command no longer needs to run execute()
