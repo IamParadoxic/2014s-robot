@@ -22,9 +22,6 @@ public class Solenoid_System extends Subsystem {
 		IntakeSol.set(Value.kForward);
 		
 	}
-	public void Wench_Lock(){
-		WenchSol.set(Value.kReverse);
-	}
 	public void Wench_Unlock(){
 		WenchSol.set(Value.kForward);
 		
