@@ -12,10 +12,10 @@ public class RobotMap {
 	
     public static SpeedController FrontLeft; 	//Port0
     public static SpeedController FrontRight; //Port1
-    public static SpeedController BackLeft;	//Port2
-    public static SpeedController BackRight;	//Port3
-	public static SpeedController IntakeMotor;	//Port4
-	public static SpeedController WenchMotor;	//Port5
+    public static SpeedController BackLeft;	//Port5
+    public static SpeedController BackRight;	//Port4
+	public static SpeedController IntakeMotor;	//Port2
+	public static SpeedController WenchMotor;	//Port3
 	
 	public static DoubleSolenoid IntakeSol; //Breakout 1 ports 2 and 3
     public static DoubleSolenoid WenchSol; //Breakout 1 ports 0 and 1

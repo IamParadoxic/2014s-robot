@@ -80,7 +80,7 @@ public class Robot extends IterativeRobot {
         
         oi = new OI();
     
-        RobotMap.IntakeSol.set(Value.kReverse);
+    //    RobotMap.IntakeSol.set(Value.kReverse);
 
     }
 	
