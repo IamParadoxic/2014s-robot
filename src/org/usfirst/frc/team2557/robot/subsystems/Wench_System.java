@@ -10,10 +10,14 @@ import edu.wpi.first.wpilibj.command.Subsystem;
  */
 public class Wench_System extends Subsystem {
 	 
-	double gp1LRT = Robot.oi.gamepad1.getRawAxis(3); //hopefully this is the axis vaule for the Right Trigger
+	double gp1LT = Robot.oi.gamepad1.getRawAxis(2); //hopefully this is the axis vaule for the Right Trigger
+	double gp1RT = Robot.oi.gamepad1.getRawAxis(3); //hopefully this is the axis vaule for the Right Trigger
 	//LT o to 1 RT 0 to -1 
-	public void MotorWench(){
-		RobotMap.WenchMotor.set(gp1LRT);
+	public void WenchML(){
+		RobotMap.WenchMotor.set(gp1LT);
+	}
+	public void WenchMR(){
+		RobotMap.WenchMotor.set(-gp1RT);
 	}
     public void initDefaultCommand() {
     	
