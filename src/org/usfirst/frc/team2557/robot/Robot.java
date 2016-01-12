@@ -1,6 +1,7 @@
 
 package org.usfirst.frc.team2557.robot;
 
+import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 //import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
@@ -58,18 +59,30 @@ public class Robot extends IterativeRobot {
      */
     
     public void robotInit() {
-		oi = new OI();
+		
         // instantiate the command used for the autonomous period
         autonomousCommand = new AutoCommand();
+        Tank = new Tank();
+        Intake_System = new Intake_System();
+        Solenoid_System = new Solenoid_System();
+        Launching = new Launching();
+        
+        Launch = new Launch();
+        LaunchIt = new LaunchIt();
+        Intake_In = new Intake_In();
+        Intake_Out = new Intake_Out();
+        Intake_Up = new Intake_Up();
+        Intake_Down = new Intake_Down();
+        SS_Up = new SS_Up();
+        SS_Down = new SS_Down();
+        
+        
+        oi = new OI();
         
         RobotMap.WenchCoded.reset();
 
-        Intake_Up.start();
-        //RobotMap.IntakeSol.set(Value.kReverse);
-        Wench_Unlock.start();
-        //RobotMap.WenchSol.set(Value.kForward);
-        SS_Down.start();
-        //RobotMap.SuperShifterSol.set(Value.kReverse);
+        
+        RobotMap.IntakeSol.set(Value.kReverse);
     }
 	
 	public void disabledPeriodic() {
@@ -96,19 +109,7 @@ public class Robot extends IterativeRobot {
         // continue until interrupted by another command, remove
         // this line or comment it out.
         if (autonomousCommand != null) autonomousCommand.cancel();
-        Tank = new Tank();
-        Intake_System = new Intake_System();
-        Solenoid_System = new Solenoid_System();
-        Launching = new Launching();
         
-        Launch = new Launch();
-        LaunchIt = new LaunchIt();
-        Intake_In = new Intake_In();
-        Intake_Out = new Intake_Out();
-        Intake_Up = new Intake_Up();
-        Intake_Down = new Intake_Down();
-        SS_Up = new SS_Up();
-        SS_Down = new SS_Down();
         
     }
 

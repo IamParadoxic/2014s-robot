@@ -13,7 +13,7 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 public class Tank extends Subsystem {
 /*  Setting a varible to equal the vaule of the 
     left/right  stick on the controller 1 joystick */
-	double gp1yL = Robot.oi.gamepad1.getRawAxis(2); 
+	double gp1yL = Robot.oi.gamepad1.getRawAxis(1); 
 	double gp1yR = Robot.oi.gamepad1.getRawAxis(5);
 
     //Left side motors power being set
