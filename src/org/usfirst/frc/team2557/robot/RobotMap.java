@@ -36,15 +36,15 @@ public class RobotMap {
 	FrontRight = new Talon(1);
 	LiveWindow.addActuator("", "FrontRight", (Talon) FrontRight);
 	
-	BackLeft = new Talon(2);
+	BackLeft = new Talon(5);
 	LiveWindow.addActuator("", "BackLeft", (Talon) BackLeft);
 	
-	BackRight = new Talon(3);
+	BackRight = new Talon(4);
 	LiveWindow.addActuator("", "BackRight", (Talon) BackRight);
     
-	IntakeMotor = new Talon(4);
+	IntakeMotor = new Talon(2);
 	
-	WenchMotor = new Talon(5);
+	WenchMotor = new Talon(3);
 	
 	WenchSol = new DoubleSolenoid(0, 0, 1);
 	IntakeSol = new DoubleSolenoid(0, 2, 3);
