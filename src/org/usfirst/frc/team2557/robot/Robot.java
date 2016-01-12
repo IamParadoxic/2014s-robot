@@ -63,12 +63,6 @@ public class Robot extends IterativeRobot {
         // instantiate the command used for the autonomous period
         autonomousCommand = new AutoCommand();
         
-        RobotMap.WenchCoded.reset();
-        RobotMap.Side1.reset();
-        RobotMap.Side2.reset();
-        RobotMap.IntakeSol.set(Value.kReverse);
-        RobotMap.WenchSol.set(Value.kForward);
-        RobotMap.SuperShifterSol.set(Value.kReverse);
         Tank = new Tank();
         Intake_System = new Intake_System();
         Wench_System = new Wench_System();
@@ -82,7 +76,12 @@ public class Robot extends IterativeRobot {
         Intake_Down = new Intake_Down();
         SS_Up = new SS_Up();
         SS_Down = new SS_Down();
+    
+        
         oi = new OI();
+    
+        RobotMap.IntakeSol.set(Value.kReverse);
+
     }
 	
 	public void disabledPeriodic() {
@@ -109,7 +108,6 @@ public class Robot extends IterativeRobot {
         // continue until interrupted by another command, remove
         // this line or comment it out.
         if (autonomousCommand != null) autonomousCommand.cancel();
-        
         
     }
 
