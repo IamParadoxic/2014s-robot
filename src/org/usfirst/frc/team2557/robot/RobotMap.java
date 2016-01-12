@@ -14,8 +14,8 @@ public class RobotMap {
     public static SpeedController FrontRight; //Port1
     public static SpeedController BackLeft;	//Port5
     public static SpeedController BackRight;	//Port4
-	public static SpeedController IntakeMotor;	//Port2
-	public static SpeedController WenchMotor;	//Port3
+	public static SpeedController IntakeMotor;	//Port3
+	public static SpeedController WenchMotor;	//Port2
 	
 	public static DoubleSolenoid IntakeSol; //Breakout 1 ports 2 and 3
     public static DoubleSolenoid WenchSol; //Breakout 1 ports 0 and 1
@@ -42,9 +42,9 @@ public class RobotMap {
 	BackRight = new Talon(4);
 	LiveWindow.addActuator("", "BackRight", (Talon) BackRight);
     
-	IntakeMotor = new Talon(2);
+	IntakeMotor = new Talon(3);
 	
-	WenchMotor = new Talon(3);
+	WenchMotor = new Talon(2);
 	
 	WenchSol = new DoubleSolenoid(0, 0, 1);
 	IntakeSol = new DoubleSolenoid(0, 2, 3);
