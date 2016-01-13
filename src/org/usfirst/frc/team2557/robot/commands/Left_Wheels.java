@@ -11,7 +11,7 @@ public class Left_Wheels extends Command {
 
     public Left_Wheels() {
         // Use requires() here to declare subsystem dependencies
-        requires(Robot.tank);
+        requires(Robot.Tank);
     }
 
     // Called just before this Command runs the first time
@@ -20,7 +20,7 @@ public class Left_Wheels extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.tank.LeftSide();
+    	Robot.Tank.LeftSide();
     }
 
     // Make this return true when this Command no longer needs to run execute()

@@ -11,7 +11,7 @@ public class Wench_In extends Command {
 
     public Wench_In() {
         // Use requires() here to declare subsystem dependencies
-        requires(Robot.wench_system);
+        requires(Robot.Wench_System);
     }
 
     // Called just before this Command runs the first time
@@ -20,7 +20,7 @@ public class Wench_In extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.wench_system.WenchML();
+    	Robot.Wench_System.WenchML();
     }
 
     // Make this return true when this Command no longer needs to run execute()

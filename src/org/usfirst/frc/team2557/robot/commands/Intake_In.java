@@ -11,7 +11,7 @@ public class Intake_In extends Command {
 
     public Intake_In() {
         // Use requires() here to declare subsystem dependencies
-        requires(Robot.intake_system);
+        requires(Robot.Intake_System);
     }
 
     // Called just before this Command runs the first time
@@ -20,7 +20,7 @@ public class Intake_In extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.intake_system.In();
+    	Robot.Intake_System.In();
     }
 
     // Make this return true when this Command no longer needs to run execute()

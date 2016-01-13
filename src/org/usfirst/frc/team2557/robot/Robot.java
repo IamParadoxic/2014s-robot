@@ -21,17 +21,17 @@ import org.usfirst.frc.team2557.robot.subsystems.Wench_System;
  */
 public class Robot extends IterativeRobot {
 
-	public static final Tank
-	tank = new Tank();
-	
-	public static final Wench_System
-	wench_system = new Wench_System();
-	
-	public static final Intake_System
-	intake_system = new Intake_System();
-	
-	public static final Solenoid_System
-	solenoid_system = new Solenoid_System();
+//	public static final Tank
+//	tank = new Tank();
+//	
+//	public static final Wench_System
+//	wench_system = new Wench_System();
+//	
+//	public static final Intake_System
+//	intake_system = new Intake_System();
+//	
+//	public static final Solenoid_System
+//	solenoid_system = new Solenoid_System();
 	
 	public static OI oi;
 	public static Tank Tank;
