@@ -125,6 +125,7 @@ public class Robot extends IterativeRobot {
         Scheduler.getInstance().run();
         LeftAndRight.start();
         Wench_Command.start();
+        
     }
     
     /**
