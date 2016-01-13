@@ -15,7 +15,7 @@ public class Intake_System extends Subsystem {
     	RobotMap.IntakeMotor.set(1); //setting the motor speed for the intake
     }
     public void Out(){
-    	RobotMap.IntakeMotor.set(-1); //setting the motor speed for the intake
+    	RobotMap.IntakeMotor.set(-1);; //setting the motor speed for the intake
     }
     public void initDefaultCommand() {
         
