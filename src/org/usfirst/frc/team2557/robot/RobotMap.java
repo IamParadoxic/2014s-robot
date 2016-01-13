@@ -9,12 +9,12 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
  */
 public class RobotMap {
 	
-    public static SpeedController FrontLeft; 	//Port0
-    public static SpeedController FrontRight; //Port1
-    public static SpeedController BackLeft;	//Port2
-    public static SpeedController BackRight;	//Port3
-	public static SpeedController IntakeMotor;	//Port4
-	public static SpeedController WenchMotor;	//Port5
+    public static CANTalon 	FrontLeft = new CANTalon(4); 	//Port4
+    public static CANTalon 	FrontRight = new CANTalon(5);	//Port5
+    public static CANTalon 	BackLeft = new CANTalon(0);		//Port0
+    public static CANTalon 	BackRight = new CANTalon(1);	//Port1
+	public static CANTalon 	IntakeMotor = new CANTalon(3);	//Port3
+	public static CANTalon 	WenchMotor = new CANTalon(2);	//Port2
 	
 	public static DoubleSolenoid IntakeSol; //Breakout 1 ports 2 and 3
     public static DoubleSolenoid WenchSol; //Breakout 1 ports 0 and 1
@@ -24,24 +24,6 @@ public class RobotMap {
 	
 	
 	public static void init(){
-    
-    
-    
-	FrontLeft = new Talon(0);
-	LiveWindow.addActuator("", "FrontLeft", (Talon) FrontLeft);
-	
-	FrontRight = new Talon(1);
-	LiveWindow.addActuator("", "FrontRight", (Talon) FrontRight);
-	
-	BackLeft = new Talon(2);
-	LiveWindow.addActuator("", "BackLeft", (Talon) BackLeft);
-	
-	BackRight = new Talon(3);
-	LiveWindow.addActuator("", "BackRight", (Talon) BackRight);
-    
-	IntakeMotor = new Talon(4);
-	
-	WenchMotor = new Talon(5);
 	
 	WenchSol = new DoubleSolenoid(0, 0, 1);
 	IntakeSol = new DoubleSolenoid(0, 2, 3);
