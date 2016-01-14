@@ -34,14 +34,9 @@ public class Robot extends IterativeRobot {
     Command Intake_In;
     Command Intake_Out;
     Command Intake_Up;
-    Command Intake_Down;
-    Command Intake_Stop;
-    Command Wench_Command;
     Command Wench_Lock;
-    Command Wench_Unlock;
     Command Wench;
     Command SS_Down;
-    Command SS_Up;
     
     /**
      * This function is run when the robot is first started up and should be
@@ -58,18 +53,13 @@ public class Robot extends IterativeRobot {
         Wench_System = new Wench_System();
         Solenoid_System = new Solenoid_System();
 
-        Wench_Unlock = new Wench_Unlock();
         Wench_Lock = new Wench_Lock();
         Wench = new Wench();
         
         Intake_In = new Intake_In();
         Intake_Out = new Intake_Out();
         Intake_Up = new Intake_Up();
-        Intake_Stop = new Intake_Stop();
-        Intake_Down = new Intake_Down();
-        SS_Up = new SS_Up();
         SS_Down = new SS_Down();
-        Drive = new Drive();
 
         oi = new OI();
     
