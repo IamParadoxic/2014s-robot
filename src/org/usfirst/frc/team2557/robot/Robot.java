@@ -21,17 +21,6 @@ import org.usfirst.frc.team2557.robot.subsystems.Wench_System;
  */
 public class Robot extends IterativeRobot {
 
-//	public static final Tank
-//	tank = new Tank();
-//	
-//	public static final Wench_System
-//	wench_system = new Wench_System();
-//	
-//	public static final Intake_System
-//	intake_system = new Intake_System();
-//	
-//	public static final Solenoid_System
-//	solenoid_system = new Solenoid_System();
 	
 	public static OI oi;
 	public static Tank Tank;
@@ -41,12 +30,12 @@ public class Robot extends IterativeRobot {
     
     Command autonomousCommand;
     Command AutoCommand;
-    Command LeftAndRight;
     Command Drive;
     Command Intake_In;
     Command Intake_Out;
     Command Intake_Up;
     Command Intake_Down;
+    Command Intake_Stop;
     Command Wench_Command;
     Command Wench_Lock;
     Command Wench_Unlock;
@@ -76,6 +65,7 @@ public class Robot extends IterativeRobot {
         Intake_In = new Intake_In();
         Intake_Out = new Intake_Out();
         Intake_Up = new Intake_Up();
+        Intake_Stop = new Intake_Stop();
         Intake_Down = new Intake_Down();
         SS_Up = new SS_Up();
         SS_Down = new SS_Down();
@@ -83,7 +73,7 @@ public class Robot extends IterativeRobot {
 
         oi = new OI();
     
-    //    RobotMap.IntakeSol.set(Value.kReverse);
+
 
     }
 	
