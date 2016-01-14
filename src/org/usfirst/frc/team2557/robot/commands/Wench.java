@@ -7,9 +7,9 @@ import edu.wpi.first.wpilibj.command.Command;
 /**
  *
  */
-public class Wench_In extends Command {
+public class Wench extends Command {
 
-    public Wench_In() {
+    public Wench() {
         // Use requires() here to declare subsystem dependencies
         requires(Robot.Wench_System);
     }
@@ -20,7 +20,7 @@ public class Wench_In extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.Wench_System.WenchML();
+    	Robot.Wench_System.WenchMLR();
     }
 
     // Make this return true when this Command no longer needs to run execute()

@@ -7,9 +7,9 @@ import edu.wpi.first.wpilibj.command.Command;
 /**
  *
  */
-public class Right_Wheels extends Command {
+public class Drive extends Command {
 
-    public Right_Wheels() {
+    public Drive() {
         // Use requires() here to declare subsystem dependencies
         requires(Robot.Tank);
     }
@@ -20,7 +20,7 @@ public class Right_Wheels extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.Tank.RightSide();
+    	Robot.Tank.Drive();
     }
 
     // Make this return true when this Command no longer needs to run execute()

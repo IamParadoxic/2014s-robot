@@ -2,6 +2,7 @@ package org.usfirst.frc.team2557.robot;
 
 import org.usfirst.frc.team2557.robot.commands.Intake_In;
 import org.usfirst.frc.team2557.robot.commands.Intake_Out;
+import org.usfirst.frc.team2557.robot.commands.Intake_Stop;
 import org.usfirst.frc.team2557.robot.commands.Intake_Down;
 import org.usfirst.frc.team2557.robot.commands.Intake_Up;
 import org.usfirst.frc.team2557.robot.commands.SS_Down;
@@ -77,11 +78,11 @@ public class OI {
     
     //this should work as a one button toggle between two commnds, that is if it works how I want it to
     gp1A.cancelWhenPressed(new Intake_Up());
-    gp1A.whileHeld(new Intake_Down());
+    gp1A.whenPressed(new Intake_Down());
     gp1A.whenReleased(new Intake_Up());
     //this should work as a one button toggle between two commnds, that is if it works how I want it to
     gp1B.cancelWhenPressed(new Wench_Lock());
-    gp1B.whileHeld(new Wench_Unlock());
+    gp1B.whenPressed(new Wench_Unlock());
     gp1B.whenReleased(new Wench_Lock());
     //this should work as a two button toggle, that is if it works how I want it to
     gp1X.cancelWhenPressed(new SS_Down());
@@ -89,9 +90,9 @@ public class OI {
     gp1Y.cancelWhenPressed(new SS_Up());
     gp1Y.whenPressed(new SS_Down());
     //Intake Motor buttons, the wench motor is tied to the triggers buttons which are z axises
-    gp1LB.whileHeld(new Intake_In());
-    gp1RB.whileHeld(new Intake_Out());
-    
+    gp1LB.whenPressed(new Intake_In());
+    gp1BACK.whenPressed(new Intake_Stop());
+    gp1RB.whenPressed(new Intake_Out());
     //Controller 2 button functions none curently
     
     }

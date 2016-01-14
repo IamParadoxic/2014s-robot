@@ -42,6 +42,7 @@ public class Robot extends IterativeRobot {
     Command autonomousCommand;
     Command AutoCommand;
     Command LeftAndRight;
+    Command Drive;
     Command Intake_In;
     Command Intake_Out;
     Command Intake_Up;
@@ -49,6 +50,7 @@ public class Robot extends IterativeRobot {
     Command Wench_Command;
     Command Wench_Lock;
     Command Wench_Unlock;
+    Command Wench;
     Command SS_Down;
     Command SS_Up;
     
@@ -69,14 +71,16 @@ public class Robot extends IterativeRobot {
 
         Wench_Unlock = new Wench_Unlock();
         Wench_Lock = new Wench_Lock();
+        Wench = new Wench();
+        
         Intake_In = new Intake_In();
         Intake_Out = new Intake_Out();
         Intake_Up = new Intake_Up();
         Intake_Down = new Intake_Down();
         SS_Up = new SS_Up();
         SS_Down = new SS_Down();
-    
-        
+        Drive = new Drive();
+
         oi = new OI();
     
     //    RobotMap.IntakeSol.set(Value.kReverse);
@@ -123,9 +127,8 @@ public class Robot extends IterativeRobot {
      */
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
-        LeftAndRight.start();
-        Wench_Command.start();
-        
+        Wench.start();
+        Drive.start();
     }
     
     /**
