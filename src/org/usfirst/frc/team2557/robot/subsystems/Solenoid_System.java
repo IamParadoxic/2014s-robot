@@ -10,27 +10,25 @@ import edu.wpi.first.wpilibj.command.Subsystem;
  *
  */
 public class Solenoid_System extends Subsystem {
-	 public static DoubleSolenoid IntakeSol = RobotMap.IntakeSol;
-	 public static DoubleSolenoid WenchSol = RobotMap.WenchSol;
-	 public static DoubleSolenoid SuperShifterSol = RobotMap.SuperShifterSol;
+
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 	public void Intake_Up(){
-		IntakeSol.set(Value.kReverse);
+		RobotMap.IntakeSol.set(Value.kReverse);
 	}
 	public void Intake_Down(){
-		IntakeSol.set(Value.kForward);
+		RobotMap.IntakeSol.set(Value.kForward);
 		
 	}
 	public void Wench_Unlock(){
-		WenchSol.set(Value.kForward);
+		RobotMap.WenchSol.set(Value.kForward);
 		
 	}
 	public void SS_Down(){
-		SuperShifterSol.set(Value.kReverse);
+		RobotMap.SuperShifterSol.set(Value.kReverse);
 	}
 	public void SS_Up(){
-		SuperShifterSol.set(Value.kForward);
+		RobotMap.SuperShifterSol.set(Value.kForward);
 		
 	}
     public void initDefaultCommand() {

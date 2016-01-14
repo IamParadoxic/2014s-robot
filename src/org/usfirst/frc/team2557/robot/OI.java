@@ -4,6 +4,7 @@ import org.usfirst.frc.team2557.robot.commands.Intake_In;
 import org.usfirst.frc.team2557.robot.commands.Intake_Out;
 import org.usfirst.frc.team2557.robot.commands.Intake_Down;
 import org.usfirst.frc.team2557.robot.commands.Intake_Up;
+import org.usfirst.frc.team2557.robot.commands.Intaske_Stop;
 import org.usfirst.frc.team2557.robot.commands.Launch;
 import org.usfirst.frc.team2557.robot.commands.LaunchIt;
 import org.usfirst.frc.team2557.robot.commands.SS_Down;
@@ -90,8 +91,9 @@ public class OI {
     gp1Y.cancelWhenPressed(new SS_Up());
     gp1Y.whenPressed(new SS_Down());
     //Intake Motor buttons, the wench motor is tied to the triggers buttons which are z axises
-    gp1LB.whileHeld(new Intake_In());
-    gp1RB.whileHeld(new Intake_Out());
+    gp1LB.whenPressed(new Intake_In());
+    gp1RB.whenPressed(new Intake_Out());
+    gp1BACK.whenPressed(new Intaske_Stop());
     
     //Controller 2 button functions none curently
     

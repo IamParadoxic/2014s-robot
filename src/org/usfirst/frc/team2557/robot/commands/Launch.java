@@ -13,7 +13,7 @@ public class Launch extends Command {
 
     public Launch() {
         // Use requires() here to declare subsystem dependencies
-        requires(Robot.launching);
+        requires(Robot.Launching);
     }
 
     // Called just before this Command runs the first time
@@ -24,7 +24,7 @@ public class Launch extends Command {
     protected void execute() {
     	
     	if(RobotMap.WenchCoded.get() >= 0 && RobotMap.WenchCoded.get() > x){
-    		Robot.launching.WenchDown();
+    		Robot.Launching.WenchDown();
     	}
     }
 

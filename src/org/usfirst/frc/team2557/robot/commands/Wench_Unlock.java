@@ -11,7 +11,7 @@ public class Wench_Unlock extends Command {
 
     public Wench_Unlock() {
         // Use requires() here to declare subsystem dependencies
-    	requires(Robot.solenoid_system);
+    	requires(Robot.Solenoid_System);
     }
 
     // Called just before this Command runs the first time
@@ -20,7 +20,7 @@ public class Wench_Unlock extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.solenoid_system.Wench_Unlock();
+    	Robot.Solenoid_System.Wench_Unlock();
     }
 
     // Make this return true when this Command no longer needs to run execute()

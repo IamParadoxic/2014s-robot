@@ -1,6 +1,5 @@
 package org.usfirst.frc.team2557.robot;
 import edu.wpi.first.wpilibj.*;
-import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into
  * to a variable name. This provides flexibility changing wiring, makes checking
@@ -9,25 +8,22 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
  */
 public class RobotMap {
 	
-    public static CANTalon 	FrontLeft = new CANTalon(4); 	//Port4
+	public static CANTalon 	FrontLeft = new CANTalon(4); 	//Port4
     public static CANTalon 	FrontRight = new CANTalon(5);	//Port5
     public static CANTalon 	BackLeft = new CANTalon(0);		//Port0
     public static CANTalon 	BackRight = new CANTalon(1);	//Port1
 	public static CANTalon 	IntakeMotor = new CANTalon(3);	//Port3
 	public static CANTalon 	WenchMotor = new CANTalon(2);	//Port2
 	
-	public static DoubleSolenoid IntakeSol; //Breakout 1 ports 2 and 3
-    public static DoubleSolenoid WenchSol; //Breakout 1 ports 0 and 1
-	public static DoubleSolenoid SuperShifterSol; //Breakout ports 4 and 5
+	public static DoubleSolenoid IntakeSol = new DoubleSolenoid(0, 2, 3); //Breakout 1 ports 2 and 3
+    public static DoubleSolenoid WenchSol = new DoubleSolenoid(0, 0, 1); //Breakout 1 ports 0 and 1
+	public static DoubleSolenoid 	SuperShifterSol = new DoubleSolenoid(0, 4, 5); //Breakout ports 4 and 5
 	
 	public static Encoder WenchCoded;
 	
 	
 	public static void init(){
 	
-	WenchSol = new DoubleSolenoid(0, 0, 1);
-	IntakeSol = new DoubleSolenoid(0, 2, 3);
-	SuperShifterSol = new DoubleSolenoid(0, 4, 5);
     }
     // If you are using multiple modules, make sure to define both the port
     // number and the module. For example you with a rangefinder:

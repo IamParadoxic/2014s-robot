@@ -7,11 +7,11 @@ import edu.wpi.first.wpilibj.command.Command;
 /**
  *
  */
-public class Left_Wheels extends Command {
-//thic command controls the left wheels
-    public Left_Wheels() {
+public class Intaske_Stop extends Command {
+
+    public Intaske_Stop() {
         // Use requires() here to declare subsystem dependencies
-        requires(Robot.tank);
+       requires(Robot.Intake_System);
     }
 
     // Called just before this Command runs the first time
@@ -20,7 +20,7 @@ public class Left_Wheels extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.tank.LeftSide();
+    	Robot.Intake_System.Stop();
     }
 
     // Make this return true when this Command no longer needs to run execute()

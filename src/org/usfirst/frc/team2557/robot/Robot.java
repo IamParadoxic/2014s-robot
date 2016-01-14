@@ -1,8 +1,6 @@
 
 package org.usfirst.frc.team2557.robot;
 
-import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
-//import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
@@ -22,17 +20,6 @@ import org.usfirst.frc.team2557.robot.subsystems.Tank;
  */
 public class Robot extends IterativeRobot {
 
-	public static final Launching
-	launching = new Launching();
-	
-	public static final Tank
-	tank = new Tank();
-	
-	public static final Intake_System
-	intake_system = new Intake_System();
-	
-	public static final Solenoid_System
-	solenoid_system = new Solenoid_System();
 	
 	public static OI oi;
 	public static Tank Tank;
@@ -42,7 +29,7 @@ public class Robot extends IterativeRobot {
     
     Command autonomousCommand;
     Command AutoCommand;
-    Command LeftAndRight;
+    Command Drive;
     Command Intake_In;
     Command Intake_Out;
     Command Intake_Up;
@@ -79,10 +66,10 @@ public class Robot extends IterativeRobot {
         
         oi = new OI();
         
-        RobotMap.WenchCoded.reset();
-
-        
-        RobotMap.IntakeSol.set(Value.kReverse);
+//        RobotMap.WenchCoded.reset();
+//
+//        
+//        RobotMap.IntakeSol.set(Value.kReverse);
     }
 	
 	public void disabledPeriodic() {
@@ -126,7 +113,7 @@ public class Robot extends IterativeRobot {
      */
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
-        LeftAndRight.start();
+        Drive.start();
     }
     
     /**
