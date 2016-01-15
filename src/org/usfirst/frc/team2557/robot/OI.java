@@ -72,13 +72,9 @@ public class OI {
     gp2RJB = new JoystickButton(gamepad2, 10);
     //Controller 1 button functions
     
-    //this should work as a one button toggle between two commnds, that is if it works how I want it to
     gp1A.toggleWhenPressed(new Intake_Up());
-    //this should work as a one button toggle between two commnds, that is if it works how I want it to
     gp1B.toggleWhenPressed(new Wench_Lock());
-    //this should work as a two button toggle, that is if it works how I want it to
     gp1X.toggleWhenPressed(new SS_Down());
-    //Intake Motor buttons, the wench motor is tied to the triggers buttons which are z axises
     gp1LB.whileHeld(new Intake_In());
     gp1RB.whileHeld(new Intake_Out());
     //Controller 2 button functions none curently
