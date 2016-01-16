@@ -5,6 +5,8 @@ import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+
 import org.usfirst.frc.team2557.robot.commands.*;
 import org.usfirst.frc.team2557.robot.subsystems.Intake_System;
 import org.usfirst.frc.team2557.robot.subsystems.Launching;
@@ -58,7 +60,7 @@ public class Robot extends IterativeRobot {
         Intake_Out = new Intake_Out();
         Intake_Up = new Intake_Up();
         SS_Up = new SS_Up();
-        
+        Drive = new Drive();
         
         oi = new OI();
         
@@ -109,6 +111,7 @@ public class Robot extends IterativeRobot {
      */
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
+        SmartDashboard.putNumber("The Winch Encoder Value is", RobotMap.WenchCoded.get());
         Drive.start();
     }
     

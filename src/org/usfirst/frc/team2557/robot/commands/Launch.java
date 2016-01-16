@@ -23,7 +23,7 @@ public class Launch extends Command {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	
-    	if(RobotMap.WenchCoded.get() >= 0 && RobotMap.WenchCoded.get() > x){
+    	if(RobotMap.WenchCoded.get() >= 0 && RobotMap.WenchCoded.get() < x){
     		Robot.Launching.WenchDown();
     	}
     }
