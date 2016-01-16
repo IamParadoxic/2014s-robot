@@ -21,9 +21,9 @@ public class RobotMap {
     public static DoubleSolenoid WenchSol = new DoubleSolenoid(0, 0, 1); //Breakout 1 ports 0 and 1
 	public static DoubleSolenoid 	SuperShifterSol = new DoubleSolenoid(0, 4, 5); //Breakout ports 4 and 5
 	
-	public static Encoder WenchCoded;
-	public static Encoder Side1;
-	public static Encoder Side2;
+	public static Counter WenchCoded = new Counter(2);
+	public static Counter Side1 = new Counter(4);
+	public static Counter Side2 = new Counter(6);
 	
 	
 	public static void init(){

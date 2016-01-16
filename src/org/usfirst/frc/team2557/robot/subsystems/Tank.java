@@ -16,7 +16,7 @@ public class Tank extends Subsystem {
     //Left side motors power being set
     public void Drive(){
     	RobotMap.FrontLeft.set(Robot.oi.gamepad1.getRawAxis(1));
-		RobotMap.BackLeft.set(Robot.oi.gamepad1.getRawAxis(1));
+		RobotMap.BackLeft.set(-Robot.oi.gamepad1.getRawAxis(1));
     	RobotMap.FrontRight.set(-Robot.oi.gamepad1.getRawAxis(5));
     	RobotMap.BackRight.set(-Robot.oi.gamepad1.getRawAxis(5));
     }
