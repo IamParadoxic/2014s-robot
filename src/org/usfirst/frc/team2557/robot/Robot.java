@@ -33,9 +33,7 @@ public class Robot extends IterativeRobot {
     Command Intake_In;
     Command Intake_Out;
     Command Intake_Up;
-    Command Intake_Down;
     Command Wench_Unlock;
-    Command SS_Down;
     Command SS_Up;
     Command Launch;
     Command LaunchIt;
@@ -59,9 +57,7 @@ public class Robot extends IterativeRobot {
         Intake_In = new Intake_In();
         Intake_Out = new Intake_Out();
         Intake_Up = new Intake_Up();
-        Intake_Down = new Intake_Down();
         SS_Up = new SS_Up();
-        SS_Down = new SS_Down();
         
         
         oi = new OI();
