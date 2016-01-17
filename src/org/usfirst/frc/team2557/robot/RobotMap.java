@@ -24,7 +24,6 @@ public class RobotMap {
 	public static Counter Right = new Counter(6);
 	
 	public static void init(){
-	
     }
     // If you are using multiple modules, make sure to define both the port
     // number and the module. For example you with a rangefinder:
