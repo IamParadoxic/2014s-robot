@@ -6,6 +6,8 @@ import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+
 import org.usfirst.frc.team2557.robot.commands.*;
 import org.usfirst.frc.team2557.robot.subsystems.Intake_System;
 import org.usfirst.frc.team2557.robot.subsystems.Solenoid_System;
@@ -21,17 +23,6 @@ import org.usfirst.frc.team2557.robot.subsystems.Wench_System;
  */
 public class Robot extends IterativeRobot {
 
-	public static final Tank
-	tank = new Tank();
-	
-	public static final Wench_System
-	wench_system = new Wench_System();
-	
-	public static final Intake_System
-	intake_system = new Intake_System();
-	
-	public static final Solenoid_System
-	solenoid_system = new Solenoid_System();
 	
 	public static OI oi;
 	public static Tank Tank;
@@ -41,16 +32,13 @@ public class Robot extends IterativeRobot {
     
     Command autonomousCommand;
     Command AutoCommand;
-    Command LeftAndRight;
+    Command Drive;
     Command Intake_In;
     Command Intake_Out;
     Command Intake_Up;
-    Command Intake_Down;
-    Command Wench_Command;
     Command Wench_Lock;
-    Command Wench_Unlock;
+    Command Wench;
     Command SS_Down;
-    Command SS_Up;
     
     /**
      * This function is run when the robot is first started up and should be
@@ -58,19 +46,27 @@ public class Robot extends IterativeRobot {
      */
     
     public void robotInit() {
-		oi = new OI();
+		
         // instantiate the command used for the autonomous period
         autonomousCommand = new AutoCommand();
         
-        RobotMap.WenchCoded.reset();
-        RobotMap.Side1.reset();
-        RobotMap.Side2.reset();
-        Intake_Up.start();
-        //RobotMap.IntakeSol.set(Value.kReverse);
-        Wench_Unlock.start();
-        //RobotMap.WenchSol.set(Value.kForward);
-        SS_Down.start();
-        //RobotMap.SuperShifterSol.set(Value.kReverse);
+        Tank = new Tank();
+        Intake_System = new Intake_System();
+        Wench_System = new Wench_System();
+        Solenoid_System = new Solenoid_System();
+
+        Wench_Lock = new Wench_Lock();
+        Wench = new Wench();
+        
+        Intake_In = new Intake_In();
+        Intake_Out = new Intake_Out();
+        Intake_Up = new Intake_Up();
+        SS_Down = new SS_Down();
+
+        oi = new OI();
+    
+
+
     }
 	
 	public void disabledPeriodic() {
@@ -97,20 +93,6 @@ public class Robot extends IterativeRobot {
         // continue until interrupted by another command, remove
         // this line or comment it out.
         if (autonomousCommand != null) autonomousCommand.cancel();
-        Tank = new Tank();
-        Intake_System = new Intake_System();
-        Wench_System = new Wench_System();
-        Solenoid_System = new Solenoid_System();
-        LeftAndRight.start();
-        Wench_Command.start();
-        Wench_Unlock = new Wench_Unlock();
-        Wench_Lock = new Wench_Lock();
-        Intake_In = new Intake_In();
-        Intake_Out = new Intake_Out();
-        Intake_Up = new Intake_Up();
-        Intake_Down = new Intake_Down();
-        SS_Up = new SS_Up();
-        SS_Down = new SS_Down();
         
     }
 
@@ -127,6 +109,9 @@ public class Robot extends IterativeRobot {
      */
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
+        SmartDashboard.putNumber("The Winch Encoder Value is", RobotMap.WenchCoded.get());
+        Wench.start();
+        Drive.start();
     }
     
     /**

@@ -11,7 +11,7 @@ public class SS_Down extends Command {
 
     public SS_Down() {
         // Use requires() here to declare subsystem dependencies
-    	requires(Robot.solenoid_system);
+    	requires(Robot.Solenoid_System);
     }
 
     // Called just before this Command runs the first time
@@ -20,7 +20,7 @@ public class SS_Down extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.solenoid_system.SS_Down();
+    	Robot.Solenoid_System.SS_Down();
     }
 
     // Make this return true when this Command no longer needs to run execute()
@@ -35,5 +35,7 @@ public class SS_Down extends Command {
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
     protected void interrupted() {
+    	Robot.Solenoid_System.SS_Up();
+
     }
 }

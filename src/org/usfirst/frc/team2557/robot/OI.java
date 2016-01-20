@@ -2,12 +2,10 @@ package org.usfirst.frc.team2557.robot;
 
 import org.usfirst.frc.team2557.robot.commands.Intake_In;
 import org.usfirst.frc.team2557.robot.commands.Intake_Out;
-import org.usfirst.frc.team2557.robot.commands.Intake_Down;
 import org.usfirst.frc.team2557.robot.commands.Intake_Up;
 import org.usfirst.frc.team2557.robot.commands.SS_Down;
-import org.usfirst.frc.team2557.robot.commands.SS_Up;
+import org.usfirst.frc.team2557.robot.commands.WenchCodeReset;
 import org.usfirst.frc.team2557.robot.commands.Wench_Lock;
-import org.usfirst.frc.team2557.robot.commands.Wench_Unlock;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
@@ -18,7 +16,7 @@ import edu.wpi.first.wpilibj.buttons.JoystickButton;
  * interface to the commands and command groups that allow control of the robot.
  */
 public class OI {
-    //Master OI
+    //Yo
 	//Gamepads
 	public Joystick gamepad1;
     public Joystick gamepad2;
@@ -75,22 +73,12 @@ public class OI {
     gp2RJB = new JoystickButton(gamepad2, 10);
     //Controller 1 button functions
     
-    //this should work as a one button toggle between two commnds, that is if it works how I want it to
-    gp1A.cancelWhenPressed(new Intake_Up());
-    gp1A.whileHeld(new Intake_Down());
-    gp1A.whenReleased(new Intake_Up());
-    //this should work as a one button toggle between two commnds, that is if it works how I want it to
-    gp1B.cancelWhenPressed(new Wench_Lock());
-    gp1B.whileHeld(new Wench_Unlock());
-    gp1B.whenReleased(new Wench_Lock());
-    //this should work as a two button toggle, that is if it works how I want it to
-    gp1X.cancelWhenPressed(new SS_Down());
-    gp1X.whenPressed(new SS_Up());
-    gp1Y.cancelWhenPressed(new SS_Up());
-    gp1Y.whenPressed(new SS_Down());
-    //Intake Motor buttons, the wench motor is tied to the triggers buttons which are z axises
+    gp1A.toggleWhenPressed(new Intake_Up());
+    gp1B.toggleWhenPressed(new Wench_Lock());
+    gp1X.toggleWhenPressed(new SS_Down());
     gp1LB.whileHeld(new Intake_In());
     gp1RB.whileHeld(new Intake_Out());
+    gp1BACK.whileHeld(new WenchCodeReset());
     
     //Controller 2 button functions none curently
     
