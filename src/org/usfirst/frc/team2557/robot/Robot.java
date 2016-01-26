@@ -30,7 +30,6 @@ public class Robot extends IterativeRobot {
     public static Launching Launching;
     
     Command autonomousCommand;
-    Command AutoCommand;
     Command Drive;
     Command Intake_In;
     Command Intake_Out;
@@ -63,11 +62,6 @@ public class Robot extends IterativeRobot {
         Drive = new Drive();
         
         oi = new OI();
-        
-//        RobotMap.WenchCoded.reset();
-//
-//        
-//        RobotMap.IntakeSol.set(Value.kReverse);
     }
 	
 	public void disabledPeriodic() {

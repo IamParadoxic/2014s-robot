@@ -9,10 +9,22 @@ public class AutoCommand extends CommandGroup {
     
     public  AutoCommand() {
         // Add Commands here:
-        // e.g. addSequential(new Command1());
+    	addSequential(new Intake_Down());
+        addParallel(new Launch());
+    	addSequential(new AutoBack());
+    	addSequential(new AutoIntake_In());
+    	addSequential(new AutoForward());
+    	addSequential(new AutoBack());
+    	addSequential(new AutoForward());
+    	addSequential(new AutoBack());
+    	addSequential(new LaunchIt());
+        addSequential(new Launch());
+    	addSequential(new AutoBack());
+
+
         //      addSequential(new Command2());
         // these will run in order.
-
+    	
         // To run multiple commands at the same time,
         // use addParallel()
         // e.g. addParallel(new Command1());

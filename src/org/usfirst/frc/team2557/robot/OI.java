@@ -6,7 +6,7 @@ import org.usfirst.frc.team2557.robot.commands.Intake_Up;
 import org.usfirst.frc.team2557.robot.commands.Launch;
 import org.usfirst.frc.team2557.robot.commands.LaunchIt;
 import org.usfirst.frc.team2557.robot.commands.SS_Up;
-import org.usfirst.frc.team2557.robot.commands.WenchCodeReset;
+//import org.usfirst.frc.team2557.robot.commands.WenchCodeReset;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
@@ -94,7 +94,7 @@ public class OI {
     //Intake Motor buttons, the wench motor is tied to the triggers buttons which are z axises
     gp1LB.whileHeld(new Intake_In());
     gp1RB.whileHeld(new Intake_Out());
-    gp1BACK.whileHeld(new WenchCodeReset());
+//    gp1BACK.whileHeld(new WenchCodeReset());
    
     //Controller 2 button functions none curently
     

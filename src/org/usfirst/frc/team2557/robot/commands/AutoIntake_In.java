@@ -1,19 +1,17 @@
 package org.usfirst.frc.team2557.robot.commands;
 
 import org.usfirst.frc.team2557.robot.Robot;
-import org.usfirst.frc.team2557.robot.RobotMap;
+
 import edu.wpi.first.wpilibj.command.Command;
 
 /**
  *
  */
-public class Launch extends Command {
-//this command is to bring down the catapulte down and lock it
-    double x = 500;
-
-    public Launch() {
+public class AutoIntake_In extends Command {
+//this command is to bring in stuff witht the intake motor
+    public AutoIntake_In() {
         // Use requires() here to declare subsystem dependencies
-        requires(Robot.Launching);
+        requires(Robot.Intake_System);
     }
 
     // Called just before this Command runs the first time
@@ -22,15 +20,12 @@ public class Launch extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	
-    	if(RobotMap.WenchCoded.get() >= 0 && RobotMap.WenchCoded.get() < x){
-    		Robot.Launching.WenchDown();
-    	}
+    	Robot.Intake_System.In();
     }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return false;
+        return true;
     }
 
     // Called once after isFinished returns true
@@ -40,5 +35,7 @@ public class Launch extends Command {
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
     protected void interrupted() {
+    	Robot.Intake_System.Stop();
+
     }
 }

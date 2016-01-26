@@ -14,7 +14,7 @@ public class RobotMap {
     public static CANTalon 	BackRight = new CANTalon(1);	//Port1
 	public static CANTalon 	IntakeMotor = new CANTalon(3);	//Port3
 	public static CANTalon 	WenchMotor = new CANTalon(2);	//Port2
-	
+	public static RobotDrive Drive = new RobotDrive(FrontLeft, BackLeft, FrontRight, BackRight);
 	public static DoubleSolenoid IntakeSol = new DoubleSolenoid(0, 2, 3); //Breakout 1 ports 2 and 3
     public static DoubleSolenoid WenchSol = new DoubleSolenoid(0, 0, 1); //Breakout 1 ports 0 and 1
 	public static DoubleSolenoid 	SuperShifterSol = new DoubleSolenoid(0, 4, 5); //Breakout ports 4 and 5
